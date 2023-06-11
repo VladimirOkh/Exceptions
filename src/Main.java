@@ -4,7 +4,9 @@ import java.nio.charset.UnsupportedCharsetException;
 
 public class Main {
     public static void main(String[] args) {
-
+        if (copyFileUsingStream("src/utf.txt", "UTF-8", "src/win1251.txt", "WINDOWS-1251")){
+            System.out.println("Перекодировка прошла успешно");
+        }
     }
 
     private static boolean copyFileUsingStream(String source, String sourceEnc, String dest, String destEnc){
